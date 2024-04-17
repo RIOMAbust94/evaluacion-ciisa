@@ -6,26 +6,42 @@
     <title>Contacto</title>
     <audio controls autoplay loop>
         <source src="Luigi%20Boccherini%20-%20Minuetto.mp3" type="audio/mpeg">
-        Tu navegador no admite la reproducción de audio.
     </audio>
 </head>
 <body>
 <h1>Contacto</h1>
-<p>¿Tienes alguna pregunta o solicitud? Contáctanos:</p>
-<ul>
-    <li>Correo: <a href="mailto:info@galeriaarte.com">info@galeriaarte.com</a></li>
-    <li>Teléfono: +34 123 456 789</li>
-    <li>Horario de atención presencial: Lunes a Viernes, 10:00 AM - 6:00 PM</li>
-</ul>
-<form action="procesar_formulario.php" method="post">
-    <label for="tipo_solicitud">Tipo de Solicitud:</label>
-    <select name="tipo_solicitud" id="tipo_solicitud">
-        <option value="compra">Compra</option>
-        <option value="consulta">Consulta</option>
-        <option value="venta">Venta</option>
-    </select>
-    <input type="submit" value="Enviar">
-</form>
+<div class="container">
+    <h1>Contacto</h1>
+    <form action="/enviar" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" required>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="opcion">Selecciona una opción:</label>
+        <select id="opcion" name="opcion">
+            <option value="compra">Compra</option>
+            <option value="venta">Venta</option>
+            <option value="consulta">Consulta</option>
+        </select>
+
+        <button type="submit">Enviar</button>
+    </form>
+    <p>Para atención presencial, visítanos en nuestras oficinas, de lunes a viernes de 09:00 hasta las 19:00 o hasta el horario que el profe miguel decida:</p>
+    <address>
+        Evergreen Terrace #742<br>
+        Springfield, U.S.A.<br>
+        Teléfono: +56 9 9996 6999
+    </address>
+</div>
 <p><a href="index.html">Volver al Inicio</a> | <a href="galeria.html">volver a la galeria</a></p>
 </body>
+<div style="text-align: center;">
+    <p>¿Tienes dudas? revisa nuestras politicas de privacidad</p>
+    <ul><li><a href="politicas.html">politicas de privacidad</a></li></ul>
+</div>
 </html>
